@@ -7,6 +7,7 @@ using MvcKutuphane.Models.Entity;
 
 namespace MvcKutuphane.Controllers
 {
+    [Authorize]
     public class DuyuruController : Controller
     {
         DBKUTUPHANEEntities db = new DBKUTUPHANEEntities();

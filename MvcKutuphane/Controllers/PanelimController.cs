@@ -1,4 +1,4 @@
-﻿using System;
+﻿        using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +8,12 @@ using MvcKutuphane.Models.Entity;
 
 namespace MvcKutuphane.Controllers
 {
+    [Authorize]
     public class PanelimController : Controller
     {
         DBKUTUPHANEEntities db = new DBKUTUPHANEEntities();
         [HttpGet]
-        [Authorize]
+        
         public ActionResult Index()
         {
             var uyemail = (string)Session["Mail"];

@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
+    int sayac = 0;
 }
 
 <h2>Yazarlar</h2>
@@ -18,8 +19,9 @@
     </tr>
     @foreach (var y in Model)
     {
+        sayac++;
         <tr>
-            <td>@y.ID</td>
+            <td>@sayac</td>
             <td>@y.AD</td>
             <td>@y.SOYAD</td>
             <td>@Html.ActionLink("Sil", "YazarSil", new { id = y.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz?')" }) </td>

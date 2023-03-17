@@ -6,6 +6,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
+    int  sayac = 0;
 }
 
 <h2>Üyeler</h2>
@@ -22,8 +23,9 @@
     </tr>
     @foreach (var uye in Model)
     {
+        sayac++;
         <tr>
-            <td>@uye.ID</td>
+            <td>@sayac</td>
             <td>@uye.ADI</td>
             <td>@uye.SOYADI</td>
             <td>@uye.OKUL</td>

@@ -8,7 +8,7 @@ using MvcKutuphane.Models.Entity;
 namespace MvcKutuphane.Controllers
 {
 
-    
+    [Authorize]
     public class MesajlarController : Controller
     {
         DBKUTUPHANEEntities db = new DBKUTUPHANEEntities();
